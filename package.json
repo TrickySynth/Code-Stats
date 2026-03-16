@@ -1,7 +1,7 @@
 {
-    "title": "Name of the extension",
+    "title": "Code Stats",
     "name": "github-<owner>-<repo>",
-    "description": "A sample extension.",
+    "description": "Code Stats extension for Pheonix Code",
     "version": "0.0.1",
     "license": "MIT",
     "author": "your name (https://github.com/<your github id>)",
