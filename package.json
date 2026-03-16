@@ -1,11 +1,11 @@
 {
     "title": "Code Stats",
-    "name": "github-<owner>-<repo>",
+    "name": "github-synth-codestats",
     "description": "Code Stats extension for Pheonix Code",
     "version": "0.0.1",
     "license": "MIT",
-    "author": "your name (https://github.com/<your github id>)",
-    "homepage": "<project web page url or this github repo url if no website available>",
+    "author": "your name (https://github.com/trickysynth)",
+    "homepage": "https://github.com/TrickySynth/Code-Stats",
     "engines": {
         "brackets": ">=2.0.0"
     },
