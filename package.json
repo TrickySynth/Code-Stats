@@ -15,7 +15,7 @@
 		"url": "https://github.com/TrickySynth/Code-Stats"
 	},
 	"engines": {
-		"vscode": "^1.43.2"
+		 "brackets": ">=2.0.0"
 	},
 	"categories": [
 		"Other"
@@ -62,7 +62,7 @@
 		]
 	},
 	"scripts": {
-		"vscode:prepublish": "npm run build",
+		"phcode:prepublish": "npm run build",
 		"build": "npm run build:native && npm run build:browser",
 		"build:browser": "node esbuild.js",
 		"build:native": "tsc --project tsconfig.json",
@@ -79,7 +79,7 @@
 		"@vscode/test-web": "^0.0.34",
 		"esbuild": "^0.17.3",
 		"typescript": "^4",
-		"vscode-test": "^1"
+		"phcode-test": "^1"
 	},
 	"dependencies": {
 		"lodash.template": "^4",
