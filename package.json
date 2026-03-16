@@ -1,20 +1,88 @@
 {
-    "title": "Code Stats",
-    "name": "github-synth-codestats",
-    "description": "Code Stats extension for Pheonix Code",
-    "version": "0.0.1",
-    "license": "MIT",
-    "author": "your name (https://github.com/trickysynth)",
-    "homepage": "https://github.com/TrickySynth/Code-Stats",
-    "engines": {
-        "brackets": ">=2.0.0"
-    },
-    "categories": "demo",
-    "keywords": [
-        "phcode", "extension", "demo"
-    ],
-    "files": [
-        "main.js"
-    ]
+	"name": "code-stats-vscode",
+	"displayName": "Code::Stats",
+	"description": "Code::Stats package for Pheonix Code",
+	"version": "1.1.0",
+	"license": "MIT",
+	"publisher": "codestats",
+	"contributors": [
+		"Synth (https://github.com/trickysynth)",
+		
+	],
+	"icon": "logo.png",
+	"repository": {
+		"type": "github",
+		"url": "https://github.com/TrickySynth/Code-Stats"
+	},
+	"engines": {
+		"vscode": "^1.43.2"
+	},
+	"categories": [
+		"Other"
+	],
+	"maintainers": [
+		
+	],
+	"activationEvents": [
+		"*"
+	],
+	"main": "./out/code-stats",
+	"browser": "./out/browser",
+	"extensionKind": [
+		"ui",
+		"workspace"
+	],
+	"contributes": {
+		"configuration": {
+			"type": "object",
+			"title": "code-stats-phcode",
+			"properties": {
+				"codestats.apikey": {
+					"type": "string",
+					"default": "",
+					"description": "Code::Stats API key for this machine."
+				},
+				"codestats.apiurl": {
+					"type": "string",
+					"default": "https://codestats.net/api/",
+					"description": "Code::Stats API URL. Only change if you know what you are doing!"
+				},
+				"codestats.username": {
+					"type": "string",
+					"default": "",
+					"description": "Code::Stats User Name"
+				}
+			}
+		},
+		"commands": [
+			{
+				"title": "Add your Code::Stats API Key",
+				"command": "code-stats.api-key"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run build",
+		"build": "npm run build:native && npm run build:browser",
+		"build:browser": "node esbuild.js",
+		"build:native": "tsc --project tsconfig.json",
+		"dev": "tsc --project tsconfig.json -watch",
+		"test:browser": "vscode-test-web --extensionDevelopmentPath=. ."
+	},
+	"devDependencies": {
+		"@dzeio/config": "^1",
+		"@esbuild-plugins/node-modules-polyfill": "^0.1.4",
+		"@types/lodash.template": "^4",
+		"@types/node": "^16",
+		"@types/node-fetch": "^2",
+		"@types/vscode": "^1",
+		"@vscode/test-web": "^0.0.34",
+		"esbuild": "^0.17.3",
+		"typescript": "^4",
+		"vscode-test": "^1"
+	},
+	"dependencies": {
+		"lodash.template": "^4",
+		"node-fetch": "^2"
+	}
 }
-
